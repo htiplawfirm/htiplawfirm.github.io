@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Search Project</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="copy.js"></script>
+    <script src="scripts.js"></script>
+  </head>
+  <body>
+    <h1>Data Search Project</h1>
+    <div class="main-container">
+      <!-- Left side content container -->
+      <div class="left-container">
+        <!-- Advanced Search Section -->
+        <form id="searchForm" onsubmit="return false">
+          <div>
+            <div class="input-group">
+              <label for="searchInput" id="searchInputLabel"
+                >Search All Fields:</label
+              >
+              <!-- The text box for Search All Fields -->
+              <input
+                type="text"
+                id="searchInput"
+                name="searchText"
+                placeholder="Search by Application Number, Trademark Name, or Applicant Name"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label>
+              <input
+                type="radio"
+                name="searchField"
+                id="searchAppNumber"
+                value="appNumber"
+                onclick="handleSearchFieldChange(event)"
+              />
+              Application Number
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="searchField"
+                id="searchTmName"
+                value="tmName"
+                onclick="handleSearchFieldChange(event)"
+              />
+              Trademark Name
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="searchField"
+                id="searchApplicantName"
+                value="applicantName"
+                onclick="handleSearchFieldChange(event)"
+              />
+              Applicant Name
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="searchField"
+                id="searchAllFields"
+                value="allFields"
+                onclick="handleSearchFieldChange(event)"
+                checked
+              />
+              Search All Fields
+            </label>
+          </div>
+
+          <button type="submit" id="searchButton">Search</button>
+
+          <p id="errorText" class="error"></p>
+        </form>
+
+        <div>
+          <label for="filterByClass">Filter by Class:</label>
+          <div id="classesContainer">
+            <!-- Class checkboxes will be added here by class.js -->
+          </div>
+        </div>
+        <button id="copyButton">Copy Table Data</button>
+        <p>current version: 5.0</p>
+      </div>
+     
+
+      <!-- Right side content container -->
+      <div class="right-container">
+          <div class="pagination" id="pagination">
+            <div>
+              <button id="prevButton" data-page="1" disabled>Previous</button>
+            </div>
+            <div>
+              <span id="currentPage">Page 1 of 1</span>
+              <br />
+              <span id="totalRecords">Total records: 0</span>
+            </div>
+            <div>
+              <button id="nextButton" data-page="1" disabled>Next</button>
+            </div>
+          </div>
+
+          <table id="resultsTable">
+            <thead>
+              <tr>
+                <th>Application Number</th>
+                <th>Trademark Name</th>
+                <th>Applicant Name</th>
+                <th>Class</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- The table rows will be populated dynamically with JSON data -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

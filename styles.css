@@ -1,0 +1,153 @@
+/* CSS styles go here */
+
+.main-container {
+  display: flex;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 40px; /* Update the margins to your desired value */
+}
+
+
+
+/* The left side content container */
+.left-container {
+  flex: 1
+}
+
+/* The right side table container */
+/* The right side table container */
+.right-container {
+  flex: 3; /* Update the flex value to your desired width ratio */
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+form {
+  gap: 10px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+label {
+  flex: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+input[type="text"] {
+  flex: 3;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  flex:1
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+th {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th:nth-child(1) {
+  min-width: 50px;
+}
+
+th:nth-child(2) {
+  min-width: 200px;
+}
+
+th:nth-child(3) {
+  min-width: 250px;
+}
+
+th:nth-child(4) {
+  min-width: 100px;
+}
+.error {
+  color: red;
+  margin-top: 5px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.pagination div {
+  flex: 1;
+  text-align: center;
+}
+
+.pagination div:last-child {
+  text-align: right;
+}
+
+.pagination button {
+  margin: 0 5px;
+}
+#copyButton {
+  align-self: flex-start;
+  margin-bottom: 10px;
+}
+
+/* CSS */
+.checkbox-item {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+/* Optional: Add some styling for the label text */
+.checkbox-item label {
+  margin-left: 5px;
+}
